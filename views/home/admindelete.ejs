@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Delete Page</title>
+
+	<style>
+table, td, th {  
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  padding: 15px;
+}
+</style>
+</head>
+<body>
+
+<h1>Delete Page</h1> 
+
+	<font size="5px"><a href="/adminhome">Back</a> |
+	<a href="/logout">logout</a> </font>
+	<br>
+	<br>
+
+	<table border="0" width="300px" >
+		<tr>
+			<td width="35%">User Name</td>
+			<td width="2%">:</td>
+			<td><%=userName%></td>
+		</tr>
+		<tr>
+			<td>Password</td>
+			<td>:</td>
+			<td><%=userPassword%></td>
+		</tr>
+		
+	</table>
+<br>
+<b  style="color:red; font-size:20px;">Are you sure? this can't be undone if you click confirm!</b>
+
+<form method="post">
+		<input type="hidden" name="uid" value="<%=id%>">
+		<input type="submit" name="delete" value="Confirm">
+</form>
+
+</body>
+</html>

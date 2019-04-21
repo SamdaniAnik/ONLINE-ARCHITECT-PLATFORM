@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Edit User</title>
+
+	<style>
+	table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {background-color: #f2f2f2;}
+</style>
+</head>
+<body>
+
+<h1>Edit User</h1> 
+
+	<font size="4px"><a href="/adminhome">Back</a> |
+	<a href="/logout">logout</a> </font>
+	<br>
+	<br>
+
+<form method="post">
+	<table border="0" width="300px" >
+		<tr>
+			<td width="35%">User Name</td>
+			<td width="2%">:</td>
+			<td><input type="text"  name="userName" value="<%=userName%>"/></td>
+		</tr>
+		<tr>
+			<td>Password</td>
+			<td>:</td>
+			<td><input type="password"  name="userPassword" value="<%=userPassword%>" /></td>
+		</tr>
+		
+		<tr>
+			<td></td>
+			<td></td>
+			<td><input type="submit"  name="update" value="Update" /></td>
+		</tr>
+	</table>
+</form>
+
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Add User</title>
+
+	<script type="text/javascript" src="assets/jquery/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="assets/jquery/jquery-ui.js"></script>
+	<script type="text/javascript" src="assets/jquery/script.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="assets/jquery/jquery-ui.theme.css">
+	<link rel="stylesheet" type="text/css" href="assets/jquery/jquery-ui.structure.css">
+	<link rel="stylesheet" type="text/css" href="assets/jquery/jquery-ui.css">
+</head>
+<body>
+
+<h1>Add User</h1> 
+
+	<a href="/adminhome">Back</a> |
+	<a href="/logout">logout</a> 
+	<br>
+	<br>
+
+<form method="post">
+	<table border="0" width="300px" >
+		<tr>
+					<td>User Name</td>
+					<td><input type="text" name="userName"></td>
+				</tr>
+		<tr>
+					<td>Password </td>
+					<td><input type="password" name="userPassword"></td>
+				</tr>
+				<tr>
+					<td> Email</td>
+					<td><input type="text" name="userEmail"></td>
+				</tr>
+				<tr>
+					<td>Phone </td>
+					<td><input type="text" name="userPhone"></td>
+				</tr>
+				<tr>
+					<td>Address</td>
+					<td><input type="text" name="userAddress"></td>
+				</tr>
+				<tr>
+					<td>Date of birth </td>
+					<td><input type="text" id="datepicker" name="userDob"></td>
+				</tr>
+		
+		<tr>
+			<td></td>
+			<td></td>
+			<td><input type="submit"  name="save" value="Save" /></td>
+		</tr>
+	</table>
+</form>
+
+</body>
+</html>

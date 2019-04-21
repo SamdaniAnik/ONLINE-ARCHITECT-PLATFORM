@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Delete Page</title>
+
+	<style>
+table, td, th {  
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  padding: 15px;
+}
+</style>
+</head>
+<body>
+
+<h1>Delete Page</h1> 
+
+	<font size="5px"><a href="/adminhome">Back</a> |
+	<a href="/logout">logout</a> </font>
+	<br>
+	<br>
+
+
+	<table border="0" width="300px" >
+		<tr>
+			<td width="35%">Name</td>
+			<td width="2%">:</td>
+			<td><input type="text"  name="archiName" value="<%=Name%>"/></td>
+			
+		</tr>
+		<tr>
+			<td>User Name</td>
+			<td>:</td>
+			<td><input type="text"  name="archiUsername" value="<%=Username%>"/></td>
+		</tr>
+
+		<tr>
+			<td>Email</td>
+			<td>:</td>
+			<td><input type="text"  name="archiEmail" value="<%=Email%>"/></td>
+		</tr>
+
+		<tr>
+			<td>Password</td>
+			<td>:</td>
+			<td><input type="password"  name="archiPassword" value="<%=Password%>" /></td>
+		</tr>
+
+		<tr>
+			<td>Mobile</td>
+			<td>:</td>
+			<td><input type="text"  name="archiMobile" value="<%=Mobile%>"/></td>
+		</tr>
+
+
+		<tr>
+			<td>Address</td>
+			<td>:</td>
+			<td><input type="text"  name="archiAddress" value="<%=Address%>"/></td>
+		</tr>
+	</table>
+
+
+	<br>
+<b  style="color:red; font-size:20px;">Block this user</b>
+
+<form method="post">
+		<input type="hidden" name="uid" value="<%=Id%>">
+		<input type="submit" name="delete" value="Confirm">
+</form>
+
+</body>
+</html>

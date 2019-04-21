@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>User List</title>
+
+	<style>
+
+     table {
+  	border-collapse: collapse;
+  	width: 100%;
+		}
+
+		th, td {
+		  padding: 8px;
+		  text-align: left;
+		  border-bottom: 1px solid #ddd;
+		}
+
+		tr:hover {background-color:#f5f5f5;}
+
+		#menu{
+	    width: 70%;
+	    height: 100%;
+	    //background-color: antiquewhite;
+	    float: right;
+	    text-align: right;
+	}
+	#menu>ul{
+	    list-style: none;
+	    padding-right: 100px;
+	    padding-top: 20px;
+	}
+	#menu>ul>li{
+	    display: inline-block;
+	    //background-color: aqua;
+	    margin-left: 20px;
+	}
+	#menu>ul>li>a{
+	    text-decoration: none;
+	    color: black;
+	}
+  a:hover {
+    background-color: #7b7b7b;
+    border:1px solid black;
+    font-size:25px;
+    display:block;
+}
+
+		</style>
+
+
+
+
+
+		
+	
+</head>
+
+<body>
+
+
+
+      
+	 
+
+	<h1>User List</h1>
+
+	<div id="menu">
+                <ul>
+	<li><a href="/adminhome">BACK</a></li>
+	<li><a href="/logout">LOGOUT</a></li> </ul></div>
+	<br>
+	<br>
+
+	<table border="1" width="400px" >
+		<tr>
+			<th>ID</th>
+			<th>USERNAME</th>
+			<th>Action</th>
+		</tr>
+
+		<% for(var i=0; i < uList.length; i++){ %>
+		<tr>
+			<td><%= uList[i].id %></td>
+			<td><%= uList[i].userName %></td>
+			<td>
+
+				<div id="menu">
+                <ul>
+				<li><a href="/adminhome/userlist/<%= uList[i].id %>">Unblock</a></li></ul></div> 
+			</td>
+		</tr>
+		<% } %>
+	</table>
+</body>
+</html>

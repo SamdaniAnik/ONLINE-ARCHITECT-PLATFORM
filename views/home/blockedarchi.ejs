@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>User List</title>
+
+
+	<style>
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+
+th {
+  background-color: #4CAF50;
+  color: white;
+}
+
+
+</style>
+</head>
+<body>
+	<h1>Blocked Architecture List</h1>
+	
+	<font size="6px"><a href="/adminhome">BACK</a> |<a href="/logout">LOGOUT</a></font>
+	<br>
+	<br>
+
+
+	<table border="2" width="800px" hight="800px" >
+		<tr>
+			<th>ID</th>
+			<th>NAME</th>
+			<th>USERNAME</th>
+			<th>EMAIL</th>
+			<th>MOBILE</th>
+			<th>ADDRESS</th>
+			<th>ACTION</th>
+
+		</tr>
+
+		<% for(var i=0; i < uList.length; i++){ %>
+		<tr>
+			<td><%= uList[i].Id %></td>
+			<td><%= uList[i].Name %></td>
+			<td><%= uList[i].Username%></td>
+			<td><%= uList[i].Email %></td>
+			<td><%= uList[i].Mobile %></td>
+			<td><%= uList[i].Address %></td>
+
+			<td>
+
+				<div id="menu">
+                <ul>
+				<li><a href="/adminhome/archilist/<%= uList[i].Id %>">Unblock</a></li></ul></div> 
+			</td>
+			
+		</tr>
+		<% } %>
+	</table>
+</body>
+</html>
